@@ -9,9 +9,8 @@ services:
 before_script:
  - composer self-update
  - composer install --no-interaction
- - cp .env.example .env
+ - cp .env.travis .env
  - php artisan key:generate
- - php artisan migrate
 
 script:
  - ./vendor/bin/phpunit
