@@ -8,6 +8,15 @@ before_script:
  - composer install --no-interaction
  - cp .env.travis .env
  - php artisan key:generate
+ - npm install
 
 script:
  - ./vendor/bin/phpunit
+
+services:
+ - mysql
+
+cache:
+ directories:
+  - node_modules
+  - vendor
