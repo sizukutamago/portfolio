@@ -1,0 +1,16 @@
+language: php
+
+php:
+ - 7.1.10
+
+services:
+ - sqlite
+
+before_script:
+ - composer self-update
+ - composer install --no-interaction
+ - php artisan key:generate
+ - php artisan migrate
+
+script:
+ - ./vendor/bin/phpunit
