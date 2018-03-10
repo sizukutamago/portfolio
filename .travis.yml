@@ -11,17 +11,16 @@ before_script:
  - npm install
 
 script:
- - ./vendor/bin/phpunit
+ - "./vendor/bin/phpunit"
 
 services:
  - mysql
 
 cache:
  directories:
- - node_modules
- - vendor
+  - node_modules
+  - vendor
 
 notifications:
  slack:
-  rooms:
-   secure: NqJO2xH7SnlV1kmHoQ5JPfp9f7/iJh3SGuhbazTsaybjCTfHGsxyALYZ2FdCxyVg0vy/9sFJUbue1b5f7N6Y+R1yjOMI6y8FIR7SX7kuPo9ewU6BThDRsHNaGRvED1RcOyajV6qajGeKfxlIm1drzll65YdlSqrLwCzI3Dkahc3ICNzB5oNQyJgVOX9SfL5XvbyJAENt9Qb3BmYDTO4JC+UwJVd6yVLVmlelNz+t4R7PGgVCLalKySJyCs/mlwIeZtKebv8fVrIlGaQzTA2jRjMjFI5Zbh1B8iXDNSnBou6b35peibAsMt2g6euPoTzIl9hwI42qBJB/2JoiJjx5x56qHwr2kd/KM6DKt4zuL8u32JB0TME/aWY2xeLRJBlF5/mz1C7cwglXIaJXnCQCkO1gzJDEHy4XbCI5wIo4TxucVrLC9Z/JnSuV5o8pUe4i4J6VKWFNr8c4X4S52mSCNgGf5HIyBM3aYhqIXDZV87pZCtXi3ggBFxkhtVkMRQEf7l2mH9TTyVPXELfCT0mfGMTILI+CUeJJG7qWIDY6xCdJpAsncgeclWM8fUQSoHGmKPJ2fvgaic/ahhQDFA3QYwnnPHLMe2tlbaVdOKJzDIRYA5+9eKXKApLIsd5MmgcoHBpZdt978Qybri0c7+txkb/8mFlhPW0KN00qbnMb6v8
+  secure: Cp8qfFkt/h99ThWo5wmKA58q4bGwxiF7dmJ1zdaM8F+nC/O1GemBmUvLi43jmwlVcWnH/JtKQoeopEug1ObmCWFDmLMzKFVGmOr04r1Pggua/U2yat+tzak0Tm0g+HJJf1jS+BahXuLKIFSLudw6cN0eoWHzVA+bhh6enaM6gLin65Z0pHdctFSsyD2LxYqpxJao1/ApQrbdFcOpFi1xJhOi3rBqYYaWHi7yWZ5tAGl+ZdmQPMTDljcBsxaPHp2ANn/Na3VhL76XqfL2orImYMAR45SBjZps+/A/GCRYs2AksXf+Zs6U/t8+4HSKfsxoFGzc+S6U2Cg2amTDp/Ds5BrPmTzmwP0fU37/ndwz6ThkdXpPD3y7HHI4wFI9vOH28MJ/kcoA2cQw6cWi01vLhYgtoRvOMFeBQcBWfplsyY/iHI0zxVEdVbBasWDCWKQgQhmbvHp7+1ojQ8DOUxcbFf8/NfuQoeIy/XyecXXwlXD/4x+XkoaMdq1Bj1C95xdQY0y2BlPqhyo5NrMBKGaZGAE4IDHo6Gh5fe/v+Av1W/p0ncqirQqQ2Yrkoise5/RkEMjlJFs+ceq6idUCVqiTRSny9XNNFu1HPzlw8bO+tk5p0HaVdEm+WiQmv7sXCE8sJisC0ITTsyikqpb6YFz3mnS8/WPA1h7hl+mB0bkqdQY=
