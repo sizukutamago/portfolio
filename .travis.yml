@@ -16,10 +16,10 @@ script:
 services:
  - mysql
 
+
 cache:
- directories:
-  - node_modules
-  - vendor
+  directories:
+    - $HOME/.composer/cache
 
 notifications:
  slack:
