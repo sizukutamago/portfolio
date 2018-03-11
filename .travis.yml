@@ -3,6 +3,15 @@ language: php
 php:
  - 7.1.10
 
+sudo: false
+
+services:
+ - mysql
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 before_script:
  - composer self-update
  - composer install --no-interaction
@@ -11,16 +20,7 @@ before_script:
  - npm install
 
 script:
- - "./vendor/bin/phpunit"
-
-services:
- - mysql
-
-sudo: false
-
-cache:
-  directories:
-    - $HOME/.composer/cache
+ - vendor/bin/phpunit
 
 notifications:
  slack:
