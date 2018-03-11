@@ -21,7 +21,7 @@
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
             <exclude>
-                <directory>./app/Http/Controller/Auth</directory>
+                <directory>./app/Http/Controllers/Auth</directory>
                 <file>./app/Http/Middleware/RedirectIfAuthenticated.php</file>
                 <file>./app/Exceptions/Handler.php</file>
                 <file>./app/Providers/BroadcastServiceProvider.php</file>
