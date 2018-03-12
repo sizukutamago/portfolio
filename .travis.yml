@@ -2,7 +2,7 @@ language: php
 
 php:
  - 7.1.10
-
+few
 sudo: false
 
 services:
@@ -19,10 +19,11 @@ before_script:
  - cp .env.travis .env
  - php artisan key:generate
  - npm install
-
-script:
  - mkdir -p build/logs
  - chmod -R 777 build/logs
+
+script:
+ - vendor/bin/phpcs
  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 after_success:
