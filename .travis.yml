@@ -2,7 +2,7 @@ language: php
 
 php:
  - 7.1.10
-few
+
 sudo: false
 
 services:
