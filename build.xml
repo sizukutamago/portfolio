@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="portfolio" default="build">
+    <property name="outputDir" value="./bluid" override="false" />
+
+    <!-- コーディングスタイルのチェック(psr-2など) -->
+    <target name="php_codesniffer">
+        <exec command="vendor/bin/phpcs" logoutput="true" />
+    </target>
+
+    <!-- コードの品質を検査 -->
+    <target name="phpmd">
+        <exec command="vendor/bin/phpmd app/ text phpmd.xml" logoutput="true" />
+    </target>
+
+    <!-- コードの重複チェック -->
+    <target name="phpcpd">
+        <exec command="vendor/bin/phpcpd app/" logoutput="true" />
+    </target>
+
+    <!-- テスト実行 -->
+    <target name="phpunit">
+        <exec command="vendor/bin/phpunit --coverage-clover build/logs/clover.xml" logoutput="true" />
+    </target>
+
+    <!-- 実行順序指定 -->
+    <target name="build" depends="php_codesniffer, phpmd, phpcpd, phpunit" />
+</project>
