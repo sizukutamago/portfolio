@@ -24,8 +24,9 @@ before_script:
 
 script:
  - vendor/bin/phpcs
- - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
  - vendor/bin/phpmd app/ text phpmd.xml
+ - vendor/bin/phpcpd app/
+ - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 after_success:
  - vendor/bin/php-coveralls -v
